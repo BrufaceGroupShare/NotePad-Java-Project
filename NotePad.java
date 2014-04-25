@@ -326,7 +326,7 @@ public class Notepad extends javax.swing.JFrame implements ActionListener{
         // TODO add your handling code here:
         if(hasChange)
         {
-            int option = JOptionPane.showConfirmDialog(this, "Text has changed\n Do you want to save?","Thongbao",JOptionPane.YES_NO_CANCEL_OPTION);
+            int option = JOptionPane.showConfirmDialog(this, "Text has changed\n Do you want to save?","Noticing",JOptionPane.YES_NO_CANCEL_OPTION);
             if(option==JOptionPane.CANCEL_OPTION) return;
             if(option == JOptionPane.YES_OPTION || option == JOptionPane.NO_OPTION)
             {
@@ -364,7 +364,7 @@ public class Notepad extends javax.swing.JFrame implements ActionListener{
             }
             catch( IOException ex)
             {
-                System.out.println("Loi ghi tep");
+                System.out.println("Error in file writing");
             }
         }
         modeNew=false;
@@ -375,7 +375,7 @@ public class Notepad extends javax.swing.JFrame implements ActionListener{
         // TODO add your handling code here:
         if(hasChange)
         {
-            int option = JOptionPane.showConfirmDialog(this, "Text has changed\n Do you want to save?","Thongbao",JOptionPane.YES_NO_CANCEL_OPTION);
+            int option = JOptionPane.showConfirmDialog(this, "Text has changed\n Do you want to save?","Noticing",JOptionPane.YES_NO_CANCEL_OPTION);
             if(option==JOptionPane.CANCEL_OPTION)return;
             if(option == JOptionPane.YES_OPTION || option == JOptionPane.NO_OPTION)
             {
@@ -413,7 +413,7 @@ public class Notepad extends javax.swing.JFrame implements ActionListener{
             }
             catch(FileNotFoundException ex)
             {
-                System.out.println("Loi doc tep hoac khong tim thay tep");
+                System.out.println("Error in file reading or no file existance");
             }
         }
         hasChange=false;
@@ -431,7 +431,7 @@ public class Notepad extends javax.swing.JFrame implements ActionListener{
             file = fc.getSelectedFile();
             if(file.exists())
             {
-                int opt=JOptionPane.showConfirmDialog(this, "Ban co muon ghi de khong?","Thong bao",JOptionPane.YES_NO_CANCEL_OPTION);
+                int opt=JOptionPane.showConfirmDialog(this, "Do you want to overwrite?","Noticing",JOptionPane.YES_NO_CANCEL_OPTION);
                 if(opt==JOptionPane.CANCEL_OPTION || opt==JOptionPane.NO_OPTION) return;
                 if(opt==JOptionPane.YES_OPTION)
                     file.delete();
@@ -634,7 +634,7 @@ public class Notepad extends javax.swing.JFrame implements ActionListener{
             int pos2=txtMain.getText().indexOf(text,pos);
             txtMain.select(pos2, pos2+text.length());
             if(!txtMain.getText().contains(text) || pos>txtMain.getText().lastIndexOf(text))
-                JOptionPane.showConfirmDialog(find,"Khong tim thay","Thong bao...",JOptionPane.PLAIN_MESSAGE,JOptionPane.INFORMATION_MESSAGE);               
+                JOptionPane.showConfirmDialog(find,"Not found","Noticing...",JOptionPane.PLAIN_MESSAGE,JOptionPane.INFORMATION_MESSAGE);               
         }
         if(e.getActionCommand().equals("FindWhat"))
         {
@@ -644,7 +644,7 @@ public class Notepad extends javax.swing.JFrame implements ActionListener{
             int pos2=txtMain.getText().indexOf(text,pos);
             txtMain.select(pos2, pos2+text.length());
             if(!txtMain.getText().contains(text) || pos>txtMain.getText().lastIndexOf(text))
-                JOptionPane.showConfirmDialog(replace,"Khong tim thay","Thong bao...",JOptionPane.PLAIN_MESSAGE,JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showConfirmDialog(replace,"Not found","Noticing...",JOptionPane.PLAIN_MESSAGE,JOptionPane.INFORMATION_MESSAGE);
         }
         if(e.getActionCommand().equals("Replace"))
         {
@@ -653,7 +653,7 @@ public class Notepad extends javax.swing.JFrame implements ActionListener{
             int pos=txtMain.getSelectionEnd();
             int pos2=txtMain.getText().indexOf(text,pos);
             if(!txtMain.getText().contains(text) || pos>txtMain.getText().lastIndexOf(text))
-                JOptionPane.showConfirmDialog(replace,"Khong tim thay","Thong bao...",JOptionPane.PLAIN_MESSAGE,JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showConfirmDialog(replace,"Not found","Noticing...",JOptionPane.PLAIN_MESSAGE,JOptionPane.INFORMATION_MESSAGE);
             else
             {
                 txtMain.select(pos2, pos2+text.length());
