@@ -1,7 +1,7 @@
 NotePad v1.0
 ====================
 
-NotePad Java Project
+NotePad Project Roadmap for the version branch.
 
 We are now standing at the First version of the code which is a refractored version of the original code in master branch.
 
@@ -13,3 +13,7 @@ From version 1.2, we will work together again to finilize the project with minor
 
 Notice: from vesion 1.1 to version 1.2, there is only main.java and NotePad.java is generated.
 
+                            |---------> Kien   ---------> 
+
+Ver 1.0 ---------> Ver 1.1 [                              ] ---------> Ver 1.2 ---------> Ver 1.3 (Final)
+                            |---------> Salman --------->
