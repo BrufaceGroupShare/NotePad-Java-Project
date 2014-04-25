@@ -11,4 +11,5 @@ After v1.1, the work will divided into 2 branches Kien and Salnman for individua
 
 From version 1.2, we will work together again to finilize the project with minor features for the application and pack a deliverable vesion 1.3.
 
+Notice: from vesion 1.1 to version 1.2, there is only main.java and NotePad.java is generated.
 
