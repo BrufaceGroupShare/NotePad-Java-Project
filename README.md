@@ -1,4 +1,4 @@
-NotePad-Java-Project
+NotePad Original
 ====================
 
 NotePad Java Project
