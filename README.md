@@ -1,4 +1,4 @@
-NotePad-Java-Project
+NotePad v1.0
 ====================
 
 NotePad Java Project
